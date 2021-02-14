@@ -1,0 +1,566 @@
+html, body {
+    margin: 0;
+    overflow: hidden
+}
+
+body {
+    background-color: azure;
+    transition: 0.5s;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    cursor: default;
+    opacity: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h3 {
+    color: rgb(20, 63, 143);
+    font-size: 125%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#TB {
+    position: absolute;
+    top: 72.2%;
+    left: 8%;
+    opacity: 0;
+    width: 40%;
+    transition: filter 0.5s;
+}
+
+#TH {
+    position: absolute;
+    top: 8%;
+    left: 42%;
+    opacity: 0;
+    width: 40%;
+    transition: filter 0.5s;
+}
+
+#TH, #TB {
+    -webkit-filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+}
+
+#bouton {
+    border: 0px solid rgb(31, 103, 236);
+    transition: background-color 1s;
+}
+
+#weather {
+    position: absolute;
+    left: 75%;
+    font-size: small;
+    top: -0.05%;
+    color: white;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#cityname {
+    position: absolute;
+    font-size: smaller;
+    left: 90.5%;
+    top: 0%;
+    cursor: pointer;
+    opacity: 0;
+    color: white;
+}
+
+#hoverhaut, #hoverbas {
+    cursor: pointer;
+}
+
+#carréhaut, #carrébas {
+    position: absolute;
+    opacity: 0;
+    -webkit-filter: drop-shadow(0px 0px 1px rgb(0, 0, 0));
+    filter: drop-shadow(0px 0px 1px rgb(0, 0, 0));
+}
+
+#carréhaut {
+    top: 0%;
+    left: 99.5%;
+    width: 9.5%;
+}
+
+#carrébas {
+    top: 81%;
+    left: -9%;
+    width: 9.5%;
+}
+
+#météo {
+    position: absolute;
+    width: 40%;
+    transition: color 0.8s;
+}
+
+#météo0 {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    height: 17%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 300%;
+    left: 39%;
+    cursor: pointer;
+    opacity: 1;
+    transition: background-color 0.8s;
+}
+
+#météo1 {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    height: 17%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 300%;
+    left: -18.5%;
+    cursor: pointer;
+    opacity: 0;
+    transition: background-color 0.8s;
+}
+
+#météo2 {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    height: 17%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 300%;
+    left: 26.5%;
+    cursor: pointer;
+    opacity: 0;
+    transition: background-color 0.8s;
+}
+
+#météo3 {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    height: 17%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 300%;
+    left: 51.5%;
+    cursor: pointer;
+    opacity: 0;
+    transition: background-color 0.8s;
+}
+
+#météo4 {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    height: 17%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 300%;
+    left: 96.5%;
+    cursor: pointer;
+    opacity: 0;
+    transition: background-color 0.8s;
+}
+
+#mode {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 8%;
+    height: 4%;
+    padding: 0.3% 0.5% 0.5% 0.5%;
+    position: absolute;
+    top: 94.5%;
+    left: 89.5%;
+    cursor: pointer;
+    opacity: 0;
+    transition: transform 0.2s, background-color 0.8s;
+}
+
+.calendrier {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    height: 17%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 30.5%;
+    left: 26.5%;
+    cursor: pointer;
+    opacity: 0;
+    transition: background-color 0.8s;
+    display: none;
+}
+
+.vérité {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    height: 17%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 30.5%;
+    left: 51.5%;
+    cursor: pointer;
+    opacity: 0;
+    transition: background-color 0.8s;
+    display: none;
+}
+
+.temp {
+    position: absolute;
+    left: 227px;
+    top: 70px;
+    font-size: smaller;
+}
+
+.what {
+    display: none;
+}
+
+body.night {
+    background-color: rgb(39, 38, 38);
+    color: white;
+}
+
+#mode:hover {
+    transform: scale(1.2);
+}
+
+.vérité.night, .calendrier.night {
+    background-color: black;
+    color: white;
+}
+
+#mode.night {
+    background-color: black;
+    transition: transform 0.2s, background-color 0.8s;
+}
+
+#TH.wow, #TB.wow {
+    -webkit-filter: drop-shadow(0px 0px 25px rgb(0, 0, 0));
+    filter: drop-shadow(0px 0px 15px rgb(0, 0, 0));
+}
+
+#météo0.night, #météo1.night, #météo2.night, #météo3.night, #météo4.night, #Graph.night, #Outils.night, #Durée.night, #librairies.night, #languages.night {
+    background-color: rgb(6, 15, 35);
+    color: white;
+    transition: background-color 0.8s;
+}
+
+#météo0.sun, #météo1.sun, #météo2.sun, #météo3.sun, #météo4.sun {
+    background-color: rgb(236, 215, 33);
+}
+
+#météo0.rain, #météo1.rain, #météo2.rain, #météo3.rain, #météo4.rain {
+    background-color: rgb(31, 103, 236);
+}
+
+#météo0.cloud, #météo1.cloud, #météo2.cloud, #météo3.cloud, #météo4.cloud {
+    background-color: rgb(99, 96, 89);
+}
+
+#min0, #min1, #min2, #min3, #min4 {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: larger;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: aqua;
+}
+
+#max0, #max1, #max2, #max3, #max4 {
+    position: absolute;
+    top: 40%;
+    left: 75%;
+    font-size: larger;
+    font-size: larger;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: darkred;
+}
+
+#mid0, #mid1, #mid2, #mid3, #mid4 {
+    position: absolute;
+    top: 40%;
+    left: 40.5%;
+    font-size: larger;
+    font-size: larger;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: rgb(235, 146, 30);
+}
+
+#Graph {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 68%;
+    height: 68%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 100%;
+    left: 13.5%;
+    opacity: 1;
+    transition: background-color 0.8s;
+    transition: transform 0.2s;
+    background-color: gainsboro;
+}
+
+#Graphtemp {
+    position: relative;
+    left: 15%;
+    top: 3%;
+}
+
+canvas {
+    width: 83% !important;
+    height: 83% !important;
+}
+
+.Boutonmétéo {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+    width: 10%;
+    height: 3%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    opacity: 1;
+    transition: background-color 0.8s;
+    transition: transform 0.2s;
+    background-color: gainsboro;
+}
+
+#HumiditéBouton {
+    left: 1%;
+    top: 87%;
+    cursor: pointer;
+}
+
+#VentBouton {
+    left: 1%;
+    top: 79%;
+    cursor: pointer;
+}
+
+#TempératureBouton {
+    left: 1%;
+    top: 71%;
+    cursor: pointer;
+}
+
+#TempératureBouton.night, #VentBouton.night, #HumiditéBouton.night, #RetourBouton.night {
+    background-color: rgb(12, 30, 68);
+    color: white;
+    transition: background-color 0.8s;
+}
+
+.Boutonmétéo:hover, #RetourBouton:hover {
+    transform: scale(1.15);
+}
+
+#RetourBouton {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    border-radius: 7px;
+    text-align: center;
+    width: 2.5%;
+    height: 4%;
+    padding: 2px 2px 2px 2px;
+    position: absolute;
+    opacity: 1;
+    transition: background-color 0.8s;
+    transition: transform 0.2s;
+    background-color: gainsboro;
+    top: -3%;
+    cursor: pointer;
+}
+
+#MétéoTitle {
+    position: absolute;
+    left: 43%;
+    top: -5%;
+    opacity: 1;
+    font-size: 38px;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#Propos {
+    position: absolute;
+    top: 84%;
+    left: 6%;
+    font-size: 270%;
+    opacity: 0;
+}
+
+#languages {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 23%;
+    height: 23%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 3%;
+    left: -52%;
+    opacity: 0;
+    transition: background-color 0.8s;
+    transition: transform 0.2s;
+    background-color: gainsboro;
+}
+
+#langimg {
+    position: relative;
+    width: 100%;
+    left: -3%;
+}
+
+#HTML, #CSS, #JS, #Github, #VSCODE, #Photoshop {
+    position: relative;
+    width: 25%;
+    padding-left: 10px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+#HTML:hover, #CSS:hover, #JS:hover, #Github:hover, #VSCODE:hover, #Photoshop:hover {
+    transform: scale(1.2);
+}
+
+#librairies {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 23%;
+    height: 40%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 33%;
+    left: -52%;
+    opacity: 0;
+    transition: background-color 0.8s;
+    transition: transform 0.2s;
+    background-color: gainsboro;
+}
+
+#JQUERY {
+    position: relative;
+    width: 78%;
+    left: 0%;
+    top: 0%;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+#JQUERY:hover, #CHART:hover, #MOMENT:hover {
+    transform: scale(1.1);
+}
+
+#Durée {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 23%;
+    height: 23%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 23%;
+    left: 124%;
+    opacity: 0;
+    transition: background-color 0.8s;
+    transition: transform 0.2s;
+    background-color: gainsboro;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#Duréep {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: larger;
+}
+
+#Outils {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 23%;
+    height: 23%;
+    padding: 4px 10px 10px 10px;
+    position: absolute;
+    top: 53%;
+    left: 124%;
+    opacity: 0;
+    transition: background-color 0.8s;
+    transition: transform 0.2s;
+    background-color: gainsboro;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#GraphLang {
+    position: relative;
+    left: 8%;
+    opacity: 0%;
+}
+
+#CHART {
+    position: absolute;
+    width: 45%;
+    padding-left: 10px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    left: 50%;
+    top: 45%;
+}
+
+#MOMENT {
+    position: absolute;
+    width: 38%;
+    padding-left: 10px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    top: 50%;
+    left: 3%;
+}
